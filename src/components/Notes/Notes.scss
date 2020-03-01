@@ -1,0 +1,25 @@
+.note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-enter-active {
+        animation: note 500ms ease-in alternate-reverse;
+    }
+    &-exit-active {
+        animation: note 500ms ease-out forwards;
+    }
+}
+
+@keyframes note {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        opacity: .7;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+}
